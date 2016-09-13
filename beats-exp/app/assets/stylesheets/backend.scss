@@ -2,14 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ // Font-Awesome
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
-// Font-Awesome
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-// fontawesome
-@import "fontawesome/awesome";
-
+ // Admin variables
+ @import "backend/variables";
  @import "bootstrap/variables";
 
 
@@ -17,9 +15,9 @@
  @import "bootstrap/mixins";
 
  // Reset and dependencies
+ @import "bootstrap/glyphicons";
  @import "bootstrap/normalize";
  @import "bootstrap/print";
- @import "bootstrap/glyphicons";
 
  // Core CSS
  @import "bootstrap/buttons";
@@ -63,14 +61,17 @@
  @import "bootstrap/utilities";
  @import "bootstrap/responsive-utilities";
 
-  // Shared
+ // Shared
  @import "shared/mixins";
  @import "shared/helper";
  @import "shared/lib/select2";
  @import "shared/lib/select2.bootstrap";
- @import "shared/lib/summernote";
 
-//Custom
-@import "backend/content";
-@import "backend/navigation";
-//@import "backend/toolbar";
+ // Animated Off Canvas Sidebar
+ @import "backend/sidebar/component";
+
+ // admin specific styles
+ @import "backend/content";
+ @import "backend/signin";
+ @import "backend/navigation";
+ @import "backend/toolbar";

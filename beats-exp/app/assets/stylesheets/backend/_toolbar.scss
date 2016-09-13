@@ -1,6 +1,6 @@
 .toolbar {
 	position: fixed;
-	z-index:999;
+	z-index:10;
 	width: 100%;
 	width: calc(100% - 22em);
 	background-color: #F3F3F4;
@@ -196,7 +196,7 @@
 	.c-toolbar {
 		display: inline-block;
 		border: 1px solid $gray-lighter;
-		@include border-radius(0.25em);
+		//@include border-radius(0.25em);
 		padding: 1em;
 		margin: 0 0 1em 0;
 

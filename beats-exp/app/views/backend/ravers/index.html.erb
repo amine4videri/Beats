@@ -11,7 +11,7 @@
     <% link_to icon("plus-circle"), new_backend_raver_path, class:"btn" %>
   </div>
   <div class="panel-body">
-    <-# render "admin/shared/search_form" %>
+    <% render "backend/shared/search_form" %>
   </div>
   <div class="panel-body">
     <div class="table-responsive">
@@ -28,7 +28,7 @@
         <tbody>
           <% @ravers.each do |raver| %>
             <tr>
-              <td><%= link_to raver.name, admin_raver_path(raver) %></td>
+              <td><%= link_to raver.name, backend_raver_path(raver) %></td>
               <td><%= raver.surname %></td>
               <td><%= raver.email %></td>
               <td><%= raver.phone %></td>
@@ -37,7 +37,6 @@
           <% end %>
         </tbody>
       </table>
-      <-# will_paginate @ravers, renderer: BootstrapPagination::Rails %>
     </div>
   </div>
 </div>
