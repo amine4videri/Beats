@@ -1,0 +1,59 @@
+// Sass Mixin 
+// Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
+@mixin respond-to($media) {
+    /* Landscape phones and down */
+    @if $media == xs {
+        @media (max-width: 767px) { @content; }
+    }
+    /* Landscape phone to portrait tablet */
+    @else if $media == sm {
+        @media (min-width: 768px) and (max-width: 991px) {@content; }
+    }
+    /* Portrait tablet to landscape and desktop */
+    @else if $media == md {
+        @media (min-width: 992px) and (max-width: 1199px) { @content; }
+    }
+    /* desktop and large desktop */
+    @else if $media == lg {
+        @media (min-width: 1200px) and (max-width: 1520px) { @content; }
+    }
+     /* desktop and large desktop */
+    @else if $media == xl {
+        @media (min-width: 1521px) and (max-width: 1939px) { @content; }
+    }
+    @else if $media == xxl {
+        @media (min-width: 1940px) { @content; }
+    }
+}
+
+@mixin respondto($media...) {
+    @each $mediatype in $media {
+        @include respond-to($mediatype) {@content;}
+    }
+}
+//Bootstrap text align for various sizes
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (min-width: $screen-sm-min) {
+   .text-sm-left { text-align: left; }
+   .text-sm-right { text-align: right; }
+   .text-sm-center { text-align: center; }
+   .text-sm-justify { text-align: justify; }
+}
+
+@media (min-width: $screen-md-min) {
+   .text-md-left { text-align: left; }
+   .text-md-right { text-align: right; }
+   .text-md-center { text-align: center; }
+   .text-md-justify { text-align: justify; }
+}
+
+@media (min-width: $screen-lg-min) {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
+}

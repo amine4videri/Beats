@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <title>BeatsExp</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+	<%= stylesheet_link_tag    'frontend', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'frontend', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+  <link rel="shortcut icon" type="image/x-icon" href="<%= image_path "favicon.png" %>" />
+</head>
+<body>
+<div  class="main"> 
+  <!-- video background-->
+  <!-- replace URLs with your video content URL-->
+  <video id="video-background" preload="none" autoplay="true" loop="loop" muted="muted" volume="0">
+    
+    <source src="<%= asset_path 'beats.mp4' %>" type="video/mp4">
+    <source src="img/beats.m4v">
+    <source src="img/beats.webm" type="video/webm">
+    <source src="img/beats.theora.ogv" type="video/ogg">
+  </video>
+  <div class="overlay"></div>
+  <div id="content" class="container">
+
+	<%= yield %>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy;2016 made with <i class="fa fa-heart" aria-hidden="true"></i> by BeAtS Exp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

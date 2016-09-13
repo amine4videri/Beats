@@ -1,0 +1,43 @@
+<% content_for :pagename, "Ravers" %>
+
+<% content_for :breadcrumb do %>
+  <%= bc_link "Home", admin_path %>
+  <%= bc_link "Ravers" %>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Ravers <span class="badge"><%= @ravers.count %></span></h3>
+    <% link_to icon("plus-circle"), new_backend_raver_path, class:"btn" %>
+  </div>
+  <div class="panel-body">
+    <-# render "admin/shared/search_form" %>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-condensed table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Email</th>
+            <th>telephone</th>
+            <th>Ville</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @ravers.each do |raver| %>
+            <tr>
+              <td><%= link_to raver.name, admin_raver_path(raver) %></td>
+              <td><%= raver.surname %></td>
+              <td><%= raver.email %></td>
+              <td><%= raver.phone %></td>
+              <td><%= raver.town %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <-# will_paginate @ravers, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div>
+</div>
