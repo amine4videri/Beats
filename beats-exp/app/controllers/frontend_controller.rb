@@ -1,7 +1,11 @@
 class FrontendController < ApplicationController
 	layout 'frontend'
+	 before_action :set_admin , only: [:info]
 
-	def soon
+	def info
+     
 	end
+
+
 	
 end

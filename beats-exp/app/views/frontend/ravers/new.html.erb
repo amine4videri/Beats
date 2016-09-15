@@ -1,0 +1,27 @@
+<div id="content" class="container">
+    <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
+    <div class="mailing-list">
+        <h3 class="mailing-list-heading">Join our member list to know the date!</h3>
+        <div class="row">
+            <%=form_for [:frontend, @raver] , :html => {class: 'form-inline' } do |f| %>
+                <div class="form-group">
+                    <%= f.label :name, class: "sr-only" %>
+                    <%= f.text_field :name, class: "form-control transparent"%>
+                </div>
+                <div class="form-group">
+                    <%= f.label :surname, class: "sr-only" %>
+                    <%= f.text_field :surname, class: "form-control transparent"%>
+                </div>
+                <div class="form-group">
+                    <%= f.label :town, class: "sr-only" %>
+                    <%= f.text_field :town, class: "form-control transparent"%>
+                </div>
+                <div class="form-group">
+                    <%= f.label :phone, class: "sr-only" %>
+                    <%= f.text_field :phone, class: "form-control transparent"%>
+                </div>
+                    <%= f.submit "save", class: "btn btn-primary" %>
+            <% end %>
+        </div>
+    </div>
+</div>
