@@ -6,8 +6,23 @@ class Backend::RaversController < BackendController
 
 	def show
 		@raver = Raver.find(params[:id])
-	end	
+	end
 
+    def edit
+     	@raver = Raver.find(params[:id])
+     end
+
+    def update
+    	@raver = Raver.find(params[:id])
+    	if @raver.update(raver_param)
+    	redirect_to backend_ravers_path ,notice: "Raver mise a jour"
+    	end	
+     end
+
+
+    def raver_param
+    	params.require(:raver).permit(:name,:surname,:email,:town,:phone)
+    end
 	def destroy
 		@raver = Raver.find(params[:id])
 		if @raver.destroy
