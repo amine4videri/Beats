@@ -30,11 +30,20 @@
 .main .container {
   position: relative;
   z-index: 2;
+  margin-bottom: 18px;
 }
+
+.centred{
+  top: -10%;
+  left: -9%;
+}
+.not-centred{
+  top: -11%;
+  left: -12%;
+}
+
 .main #video-background {
   position: fixed;
-  top: 0px;
-  left: 0px;
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -44,16 +53,23 @@
   background-color:#f3f3f2;
   background-position: center center;
   background-size: cover;
-  top: -11%;
-  left: -12%;
   width: 120%;
   height: 120%;
 }
+
 @media (max-width: 412px) {
-  .main {
-      background-image: url(<%= asset_path 'beats3.gif' %>) !important;
+  .main-gif {
+      background-image: url(<%= asset_path "beats3.gif"%>) !important;
       background-position: center !important;
   }
+    .new-gif {
+      background-image: url(<%= asset_path "beats4.gif"%>) !important;
+      background-position: center !important;
+  }
+    .date-gif {
+        background-image: url(<%= asset_path "beats2.gif"%>) !important;
+        background-position: center !important;
+    }
   .main #video-background {
     display: none !important;
   }
@@ -121,7 +137,7 @@
 @media (min-width: 1019px) {
   .main .cursive {
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 2000px) {
@@ -141,7 +157,7 @@
   .main .cursive {
     font-size: 35px;
     margin-bottom: 20px;
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 @media (max-width: 325px) {
@@ -155,6 +171,7 @@
   font-weight: 300;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px
 }
 @media (min-width: 2000px) {
     .main .sub {
@@ -165,7 +182,7 @@
 
 @media (max-width: 999px) {
     .main .sub {
-        margin-bottom: 160px;
+        margin-bottom: 120px;
        
     }
 }
@@ -187,11 +204,8 @@
   margin-top: 56px;
   text-align: center;
 }
-@media (max-width: 668px) {
-  .main .mailing-list  {
-    margin-top: 12px;
-  }
-}
+
+
 .main .mailing-list .mailing-list-heading {
   font-weight: 300;
   text-align: center;
@@ -199,8 +213,15 @@
   font-size: 30px;
 }
 @media (max-width: 668px) {
+
+  .main .mailing-list  {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 668px) {
   .main .mailing-list .mailing-list-heading {
     font-size: 18px;
+    margin-bottom: 5px;
   }
 @media (min-width: 768px) {
   .main .mailing-list input {
@@ -1011,4 +1032,13 @@ a.list-group-item.active > .badge,
     margin-top: 140px;
     font-size: zpx;
     margin-bottom: -12px;
+}
+.list-new{
+  text-align: center;
+  margin-top: 35vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-40%);
+}
+
+#email{
+  margin-bottom: 10px;
 }

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :ravers
   end
 
+  get "ravers/date", to: "frontend/ravers#date"
   post "ravers/new",  to: "frontend/ravers#new"
   # You can have the root of your site routed with "root"
   namespace :backend do

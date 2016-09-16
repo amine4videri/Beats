@@ -1,3 +1,7 @@
+<% content_for :video_background, "#{asset_path "beats.mp4"}" %>
+<% content_for :css_class, "main-gif" %>
+<% content_for :video_class, "not-centred" %>
+
 <div id="content" class="container">
     <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a></p>
     <h1 class="cursive">BeAtS</h1>
@@ -5,12 +9,12 @@
     <div class="mailing-list">
         <h3 class="mailing-list-heading">Join our member list to know the date!</h3>
         <div class="row">
-            <%=form_tag ravers_new_path   do %>
+            <%=form_tag ravers_new_path , class: "form-inline"  do %>
                 <div class="form-group">
                     <%= label_tag :email, "",class:"sr-only"%>
-                    <%= text_field_tag :email, "" ,class:"form-control transparent"%>
+                    <%= email_field_tag :email, " ",class:"form-control transparent col-xs-4" ,rows: 6, required: true %>
                 </div>
-                    <%= submit_tag "Join Now" , class: "btn btn-primary" %>
+                    <%= submit_tag "Join Now" , class: "btn btn-danger" %>
             <% end %>
         </div>
     </div>

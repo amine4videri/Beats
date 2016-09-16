@@ -1,8 +1,10 @@
 class Frontend::RaversController < FrontendController
     def index
+      @gif_background = ActionController::Base.helpers.asset_path('beats3.gif')
     end
 
     def new
+    @gif_background = ActionController::Base.helpers.asset_path('beats4.gif')
 		@raver = Raver.new
 		session[:email] = params[:email]
     end
@@ -11,7 +13,7 @@ class Frontend::RaversController < FrontendController
    		raver = Raver.new(raver_params)
    		raver.email = session[:email]
    		if raver.save 
-   			redirect_to backend_ravers_path
+   			redirect_to ravers_date_path
    		else
    			redirect_to root
    		end
