@@ -5,16 +5,21 @@
   <%= bc_link "Ravers" %>
 <% end %>
 
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Ravers <span class="badge"><%= @ravers.count %></span></h3>
     <% link_to icon("plus-circle"), new_backend_raver_path, class:"btn" %>
   </div>
   <div class="panel-body">
-    <% render "backend/shared/search_form" %>
-  </div>
-  <div class="panel-body">
+        <div class="col-md-6 chart">
+          <%= pie_chart Raver.group(:town).count , colors: ["#08415C", "#c75c5c","#6B818C", "#F4D35E"] %>
+        </div>
+        <div class="col-md-6">
+            <%= line_chart Raver.group_by_day(:created_at).count %>
+        </div>
     <div class="table-responsive">
+
       <table class="table table-condensed table-bordered table-striped table-hover">
         <thead>
           <tr>

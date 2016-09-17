@@ -11,32 +11,29 @@
     <% link_to icon("plus-circle"), new_backend_raver_path, class:"btn" %>
   </div>
   <div class="panel-body">
-    <% render "backend/shared/search_form" %>
-  </div>
-  <div class="panel-body">
-    <div class="row">
+    <div class="row container">
             <%=form_for [:backend,@raver] , :html => {class: 'form-horizontal col-xs-12 col-sm-2 col-sm-offset-5' } do |f| %>
                 <div class="form-group">
-                    <%= f.label :name, class: "sr-only" %>
+                    <%= f.label :name, class: "" %>
                     <%= f.text_field :name, placeholder:"Name" ,class: "form-control transparent",rows: 3, required: true %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :surname, class: "sr-only" %>
-                    <%= f.text_field :surname, placeholder:"Surname", class: "form-control transparent", rows: 3, required: true %>
+                    <%= f.label :surname, class: "" %>
+                    <%= f.text_field :surname, placeholder:"Surname", class: "form-control ", rows: 3, required: true %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :town, class: "sr-only" %>
+                    <%= f.label :town, class: "" %>
                     <%= f.text_field :town, placeholder:"Town", class: "form-control transparent", rows: 2, required: true %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :phone, class: "sr-only" %>
+                    <%= f.label :phone, class: "" %>
                     <%= f.text_field :phone, placeholder:"Telephone", class: "form-control transparent",rows: 8, required: true %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :email, class: "sr-only" %>
+                    <%= f.label :email, class: "" %>
                     <%= f.text_field :email, placeholder:"Telephone", class: "form-control transparent",rows: 8, required: true %>
                 </div>
-                    <%= f.submit "Join us", class: "btn btn-danger" %>
+                    <%= f.submit "Modifier", class: "col-xs-4 col-xs-offset-4 btn btn-danger" %>
             <% end %>
         </div>
   </div>
