@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   namespace :backend do
     resources :ravers
+    get "expenses", to: "expenses#index"
    end
   
   # Example of regular route:

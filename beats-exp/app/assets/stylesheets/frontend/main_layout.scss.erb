@@ -133,20 +133,20 @@
   text-align: center;
   margin-bottom: 40px;
 }
-
+@media (min-width: 2000px) {
+  .main .cursive {
+    margin-top: 360px;
+    margin-bottom: 100px;
+    font-size: 100px;
+  }
+}
 @media (min-width: 1019px) {
   .main .cursive {
     margin-top: 80px;
     margin-bottom: 40px;
   }
 }
-@media (min-width: 2000px) {
-  .main .cursive {
-    margin-top: 260px;
-    margin-bottom: 100px;
-    font-size: 100px;
-  }
-}
+
 @media (max-width: 1020px) {
   .main .cursive {
     margin-top: 110px;
@@ -171,12 +171,13 @@
   font-weight: 300;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  margin-bottom: 50px
+  margin-bottom: 10px
 }
-@media (min-width: 2000px) {
+@media (min-width: 1900px) {
     .main .sub {
-        margin-top: 0px;
-        font-size: 260px;
+        margin-top: 110px;
+        font-size: 330px;
+        margin-bottom: 50px;
     }
 }
 
@@ -201,8 +202,13 @@
 }
 
 .main .mailing-list {
-  margin-top: 56px;
+  margin-top: 0px;
   text-align: center;
+}
+@media (min-width: 1600px) {
+  .main .mailing-list {
+    margin-top: 120px;
+  }
 }
 
 
@@ -231,11 +237,6 @@
 @media (min-width: 992px) {
   .main .mailing-list input {
     width: 300px;
-  }
-}
-@media (min-width: 1600px) {
-  .main .mailing-list {
-    margin-top: 200px;
   }
 }
 

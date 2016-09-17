@@ -16,7 +16,7 @@
           <%= pie_chart Raver.group(:town).count , colors: ["#08415C", "#c75c5c","#6B818C", "#F4D35E"] %>
         </div>
         <div class="col-md-6">
-            <%= line_chart Raver.group_by_day(:created_at).count %>
+            <%= line_chart Raver.group_by_hour(:created_at).count , colors: ["#c75c5c"] %>
         </div>
     <div class="table-responsive">
 

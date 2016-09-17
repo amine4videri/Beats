@@ -14,7 +14,8 @@ development:
   database: beats_development
   host: localhost
   pool: 5
-
+  username: postgres
+  password: mon1papier
 
 
 
