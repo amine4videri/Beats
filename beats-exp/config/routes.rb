@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :ravers, controllers: {
+      sessions: 'frontend/ravers/sessions',
+      registrations: 'frontend/ravers/registrations'
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root "frontend/ravers#index"
+  devise_scope :raver do
+    root "frontend/ravers/registrations#index"
+  end
+
 
   get "admin", to: "backend#index"
 

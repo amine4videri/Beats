@@ -1,7 +1,6 @@
 class Frontend::RaversController < FrontendController
-    def index
-      @gif_background = ActionController::Base.helpers.asset_path('beats3.gif')
-    end
+  before_action :authenticate_raver!
+
 
     def new
     @gif_background = ActionController::Base.helpers.asset_path('beats4.gif')
